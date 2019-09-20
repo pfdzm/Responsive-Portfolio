@@ -1,59 +1,91 @@
 body {
-  max-width: 34rem;
+  font-family: "Roboto", sans-serif;
+  color: rgb(85, 85, 85);
+  /* set a max-width to ensure it's easily readable with wide window */
+  max-width: 900px;
+  /* center it */
   margin: auto;
 }
 
-.page-header {
-  border-bottom: 2px solid orangered;
-}
-.page-header h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: orangered;
-}
-
-img.corner-left {
-  vertical-align: top;
-  float: left;
-  padding: 0 20px 0 0;
+header {
+  background-color: white;
+  border-bottom: 1px solid rgb(180, 180, 180);
+  /* this is to make sure that name and nav items are aligned with body of text */
+  padding: 0 10%;
 }
 
-article p {
-  text-align: justify;
+h1 {
+  font-family: "Domine", serif;
+}
+
+div.top-left {
+  background-color: orangered;
+  display: inline-block;
+}
+
+.top-left h1 {
+  margin: 0;
+  padding: 0 1rem;
+  line-height: 5rem;
+  font-size: 35pt;
+  color: rgb(255, 255, 255);
 }
 
 nav {
-  display: inline-block;
-  width: 100%;
+  float: right;
 }
 
-ul.nav {
+nav ul.nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-flex;
-  justify-content: space-between;
-  width: 100%;
+  line-height: 5em;
 }
 
-li.nav {
-  display: inline;
-  text-align: center;
-  flex-grow: 1;
+.nav li {
+  display: inline-block;
+  padding: 0 1em;
 }
 
-li.nav a {
+.nav a {
   text-decoration: none;
-  color: orangered;
-  font-family: Arial, Helvetica, sans-serif;
+  color: inherit;
 }
 
-.top h1 {
-  display: inline;
-  margin: 0;
-  padding: 0;
+.page-header {
+  color: rgb(255, 69, 0);
+  border-bottom: 2px solid rgba(200, 200, 200, 0.4);
 }
 
-div.top {
-  display: flex;
-  align-items: baseline;
+img.corner-left {
+  float: left;
+  padding: 0 1rem 0 0;
+}
+
+.mainContainer {
+  background-color: rgba(255, 68, 0, 0.1);
+  padding: 2rem 0 5rem;
+}
+
+main {
+  max-width: 90%;
+  box-sizing: border-box;
+  margin: 0 10%;
+  padding: 0 1rem;
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  line-height: 1.5rem;
+  clear: both;
+  background-color: white;
+}
+
+footer {
+  min-height: 5rem;
+  /* make sure the footer is at the bottom by clearing any floats */
+  clear: both;
+  text-align: center;
+  background-color: rgb(85, 85, 85);
+  color: rgb(255, 255, 255);
+  border-top: 4px solid orangered;
+  line-height: 3rem;
+  font-size: 9pt;
 }
