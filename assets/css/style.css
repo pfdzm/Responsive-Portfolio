@@ -1,34 +1,33 @@
 body {
-  font-family: "Roboto", sans-serif;
-  color: rgb(85, 85, 85);
-  /* set a max-width to ensure it's easily readable with wide window */
-  max-width: 900px;
+  font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  color: #666666;
   /* center it */
-  margin: auto;
+  margin: 0 auto;
+  padding: 0;
 }
 
 header {
-  background-color: white;
-  border-bottom: 1px solid rgb(180, 180, 180);
+  background-color: #ffffff;
   /* this is to make sure that name and nav items are aligned with body of text */
-  padding: 0 10%;
+  margin: auto;
+  max-width: 960px;
 }
 
 h1 {
-  font-family: "Domine", serif;
+  font-family: "Georgia", Times, Times New Roman, serif;
+  font-size: 2rem;
 }
 
 div.top-left {
-  background-color: orangered;
+  background-color: #4aaaa5;
   display: inline-block;
 }
 
 .top-left h1 {
   margin: 0;
   padding: 0 1rem;
-  line-height: 5rem;
-  font-size: 35pt;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+  line-height: 100px;
 }
 
 nav {
@@ -39,12 +38,19 @@ nav ul.nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 5em;
+  line-height: 100px;
 }
 
 .nav li {
   display: inline-block;
-  padding: 0 1em;
+  min-width: 80px;
+  text-align: center;
+}
+
+.nav li:hover {
+  background-color: #4aaaa5;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .nav a {
@@ -53,8 +59,7 @@ nav ul.nav {
 }
 
 .page-header {
-  color: rgb(255, 69, 0);
-  border-bottom: 2px solid rgba(200, 200, 200, 0.4);
+  color: #4aaaa5;
 }
 
 img.corner-left {
@@ -64,28 +69,72 @@ img.corner-left {
 
 .mainContainer {
   background-color: rgba(255, 68, 0, 0.1);
-  padding: 2rem 0 5rem;
+  border-top: 1px solid #cccccc;
+  /* add some padding to make sure there is a gap between content and footer */
+  padding: 40px 0 80px;
+  /* make the footer stick to the bottom of the page even if content is too small */
+  /* 
+  100px header height
+  1px header border
+  40px main top padding
+  80px main bottom padding
+  8px footer top border
+  40px footer height
+  = 269px
+  */
+  min-height: calc(100vh - 269px);
 }
 
 main {
-  max-width: 90%;
+  max-width: 960px;
   box-sizing: border-box;
-  margin: 0 10%;
-  padding: 0 1rem;
-  border: 1px solid rgba(200, 200, 200, 0.4);
+  margin: auto;
+  padding: 0 20px;
+  border: 1px solid #dddddd;
   line-height: 1.5rem;
   clear: both;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 footer {
-  min-height: 5rem;
   /* make sure the footer is at the bottom by clearing any floats */
-  clear: both;
   text-align: center;
-  background-color: rgb(85, 85, 85);
-  color: rgb(255, 255, 255);
-  border-top: 4px solid orangered;
-  line-height: 3rem;
+  background-color: #666666;
+  color: #ffffff;
+  border-top: 8px solid #4aaaa5;
+  line-height: 40px;
   font-size: 9pt;
+}
+
+form {
+  padding: 20px 0 40px 0;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 0 0 0;
+  line-height: 20px;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 10px;
+}
+input[type="submit"] {
+  width: initial;
+  font-weight: bold;
+  padding: 5px;
+  background-color: #4aaaa5;
+  border-radius: 5px;
+  color: #ffffff;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #4aaaa5ee;
+
 }
