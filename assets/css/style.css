@@ -151,7 +151,7 @@ input[type="submit"]:hover {
   height: 200px;
   width: 300px;
   background-image: url(../images/me.jpg);
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 20px 20px 0 0;
