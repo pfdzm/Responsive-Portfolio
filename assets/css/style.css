@@ -180,8 +180,4 @@ input[type="submit"]:hover {
   nav {
     float: right;
   }
-
-  .vert-spacer-1 {
-    display: none;
-  }
 }
