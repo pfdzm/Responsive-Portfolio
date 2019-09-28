@@ -68,9 +68,11 @@ nav ul.nav {
   border-bottom: 2px solid #dddddd;
 }
 
-img.corner-left {
-  float: left;
-  margin-right: 1rem;
+img.img-fluid {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
 }
 
 .mainContainer {
@@ -126,12 +128,13 @@ textarea {
   padding: 0 0 0 0;
   line-height: 20px;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 input,
 textarea {
-  margin: 0 0 20px 0;
-  padding: 0 0 0 10px;
+  margin: 0 0 1rem 0;
+  padding: 0 0 0 0.2rem;
 }
 input[type="submit"] {
   width: initial;
@@ -146,41 +149,47 @@ input[type="submit"]:hover {
   background-color: #4aaaa5ee;
 }
 
+/* using a few different placeholder images with different sizes */
 .img-widget {
   display: inline-block;
-  margin: 20px 20px 0 0;
+  background-image: url(https://picsum.photos/id/237/300/200?grayscale);
+  /* background-size: cover; */
+  background-position: center;
+  height: 200px;
   width: 100%;
   max-width: 300px;
+  margin: 1rem 1rem 0 0;
 }
 
-/* using a few different placeholder images with different sizes */
-#project1,
-#project2,
-#project3,
-#project4,
-#project5 {
-  background-image: url(https://picsum.photos/id/237/300/200?grayscale);
-  background-size: cover;
-  background-position: center;
-
-  height: auto;
-  width: 100%;
-}
-
-.img-widget .label a {
+.img-widget a {
+  display: inline-block;
   text-decoration: none;
-  color: inherit;
+  background-color: #4aaaa5;
+  font-weight: bold;
+  color: #ffffff;
   text-align: center;
   width: 100%;
-  display: inline-block;
-  margin: 150px 0 0;
-  background-color: #4aaaa5;
-  color: #ffffff;
-  font-weight: bold;
+  position: relative;
+  top: 80%;
 }
 
 @media screen and (min-width: 768px) {
   nav {
     float: right;
+  }
+
+  .img-widget {
+    width: 300px;
+    height: 200px;
+  }
+
+  .img-widget a {
+    margin-top: 0;
+  }
+
+  img.corner-left {
+    float: left;
+    margin-right: 1rem;
+    padding-bottom: 0;
   }
 }
