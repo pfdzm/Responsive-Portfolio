@@ -24,17 +24,14 @@ h1 {
   font-size: 2rem;
 }
 
-.brand {
-  background-color: #4aaaa5;
-  width: 100%;
-}
-
 .brand h1 {
   margin: 0;
   padding: 0 1rem;
   color: #ffffff;
   line-height: 100px;
   text-align: center;
+  background-color: #4aaaa5;
+  width: 100%;
 }
 
 nav ul.nav {
@@ -83,16 +80,8 @@ img.img-fluid {
   /* add some padding to make sure there is a gap between content and footer */
   padding: 1rem;
   /* make the footer stick to the bottom of the page even if content is too small */
-  /* 
-    100px header height
-    1px header border
-    40px main top padding
-    80px main bottom padding
-    8px footer top border
-    40px footer height
-    = 269px
-    */
-  min-height: calc(100vh - 269px);
+  /* 100% of viewport height - (header + footer height) */
+  min-height: calc(100vh - 148px);
 }
 
 main {
@@ -129,12 +118,15 @@ textarea {
   line-height: 20px;
   box-sizing: border-box;
   font-family: inherit;
+
 }
 
 input,
 textarea {
   margin: 0 0 1rem 0;
   padding: 0 0 0 0.2rem;
+  border: 1px solid #dddddd;
+
 }
 input[type="submit"] {
   width: initial;
@@ -178,6 +170,11 @@ input[type="submit"]:hover {
     float: right;
   }
 
+  .brand {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
   .img-widget {
     width: 300px;
     height: 200px;
@@ -190,6 +187,29 @@ input[type="submit"]:hover {
   img.corner-left {
     float: left;
     margin-right: 1rem;
-    padding-bottom: 0;
+    padding: 0;
+    height: auto;
+    width: 150px;
+  }
+
+  nav ul.nav {
+    line-height: 4;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .brand {
+    margin-left: 0;
+  }
+
+  main {
+    max-width: 768px;
+    margin: 0 auto 0 0;
+  }
+
+  header {
+    margin: 0 1rem;
+    max-width: unset;
   }
 }
