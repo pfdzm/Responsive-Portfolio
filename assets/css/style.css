@@ -148,9 +148,9 @@ input[type="submit"]:hover {
 
 .img-widget {
   display: inline-block;
-  background-size: cover;
-  background-position: center;
   margin: 20px 20px 0 0;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* using a few different placeholder images with different sizes */
@@ -160,8 +160,11 @@ input[type="submit"]:hover {
 #project4,
 #project5 {
   background-image: url(https://picsum.photos/id/237/300/200?grayscale);
-  height: 200px;
-  width: 300px;
+  background-size: cover;
+  background-position: center;
+
+  height: auto;
+  width: 100%;
 }
 
 .img-widget .label a {
